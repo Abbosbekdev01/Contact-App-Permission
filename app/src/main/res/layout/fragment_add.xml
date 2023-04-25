@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context=".ui.AddFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue"
+            app:menu="@menu/menu_add_too_bar"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="New Contact"
+            app:titleTextAppearance="@style/MyTitleTextAppearance"
+            app:titleTextColor="#233d4d" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_name"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Name"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/blue_dark"
+        app:helperTextTextColor="#E53935"
+        app:hintTextColor="@color/blue_dark"
+        app:startIconDrawable="@drawable/ic_person">
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:paddingEnd="40dp"
+            android:textColor="@color/blue_dark"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_surname"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Surname"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/blue_dark"
+        app:helperTextTextColor="#E53935"
+        app:hintTextColor="@color/blue_dark"
+        app:startIconDrawable="@drawable/ic_person">
+
+        <EditText
+            android:id="@+id/edt_surname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:paddingEnd="40dp"
+            android:textColor="@color/blue_dark"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_number"
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Number"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/blue_dark"
+        app:helperTextTextColor="#E53935"
+        app:hintTextColor="@color/blue_dark"
+        app:prefixText="+998"
+        app:startIconDrawable="@drawable/ic_phone">
+
+        <EditText
+            android:id="@+id/edt_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="0123456789"
+            android:inputType="number"
+            android:maxLength="9"
+            android:paddingEnd="40dp"
+            android:textColor="@color/blue_dark"
+            android:textStyle="bold" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinate_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="60dp" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

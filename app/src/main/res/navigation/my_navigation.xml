@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="uz.abbosbek.contactapp.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sentSmsFragment"
+            app:destination="@id/sentSmsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_viewUserFragment"
+            app:destination="@id/viewUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="uz.abbosbek.contactapp.ui.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" />
+    <fragment
+        android:id="@+id/sentSmsFragment"
+        android:name="uz.abbosbek.contactapp.ui.SentSmsFragment"
+        android:label="fragment_sent_sms"
+        tools:layout="@layout/fragment_sent_sms" />
+    <fragment
+        android:id="@+id/viewUserFragment"
+        android:name="uz.abbosbek.contactapp.ui.ViewUserFragment"
+        android:label="fragment_view_user"
+        tools:layout="@layout/fragment_view_user" />
+</navigation>
